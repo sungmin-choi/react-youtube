@@ -1,0 +1,6 @@
+.videoList {
+  background-color: #596275;
+  display: flex;
+
+  flex-wrap: wrap;
+}
