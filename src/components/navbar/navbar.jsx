@@ -1,17 +1,20 @@
-import React, { useRef } from 'react';
+import React, { memo, useRef } from 'react';
 import styles from './navbar.module.css';
 
-const Navbar = ({onSearch}) => {
+const Navbar = memo(({onSearch,onHome}) => {
+   
     const search = useRef();
     const handleSubmit=(event)=>{
         event.preventDefault();
         onSearch(search.current.value);
         search.current.value="";
-
+    }
+    const handleClickLogo=()=>{
+        onHome();
     }
     return(
         <div className={styles.navbar}>
-            <img  className={styles.logo} src="images/logo.png" alt="logo" />
+            <img  onClick={handleClickLogo} className={styles.logo} src="images/logo.png" alt="logo" />
             <p className={styles.title}>Youtube</p>
         <form className={styles.searchForm}>
             <input className={styles.inputSearch} ref={search} type="text" placeholder="search.."/>
@@ -20,5 +23,5 @@ const Navbar = ({onSearch}) => {
         </div>
     );
 
-};
+})
 export default Navbar;

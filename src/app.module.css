@@ -6,4 +6,22 @@
 
 .app {
   max-width: 80rem;
+  background-color: #596275;
+}
+.content {
+  display: flex;
+}
+
+.detail {
+  flex: 1 1 70%;
+}
+
+.list {
+  flex: 1 1 30%;
+}
+
+@media only screen and (max-width: 660px) {
+  .content {
+    flex-direction: column;
+  }
 }
