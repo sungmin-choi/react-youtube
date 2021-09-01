@@ -16,9 +16,9 @@
   display: flex;
 }
 .inputSearch {
-  width: 520px;
-  height: 40px;
+  flex-basis: 100%;
   font-size: 20px;
+  outline: 0;
 }
 .searchBtn {
   height: 40px;
@@ -32,4 +32,9 @@
 .logo {
   width: 100px;
   height: 100px;
+}
+.logo {
+  width: 40px;
+  height: 35px;
+  margin-right: 10px;
 }

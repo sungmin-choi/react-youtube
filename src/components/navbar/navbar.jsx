@@ -11,12 +11,11 @@ const Navbar = ({onSearch}) => {
     }
     return(
         <div className={styles.navbar}>
-            <img src="/images/logo.png" alt="logo" />
+            <img  className={styles.logo} src="images/logo.png" alt="logo" />
             <p className={styles.title}>Youtube</p>
         <form className={styles.searchForm}>
-            
             <input className={styles.inputSearch} ref={search} type="text" placeholder="search.."/>
-            <button onClick={handleSubmit} className={styles.searchBtn}><i className="fas fa-search"></i></button>
+            <button onClick={handleSubmit} type="submit"className={styles.searchBtn}><i className="fas fa-search"></i></button>
         </form>
         </div>
     );
